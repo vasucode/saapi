@@ -1,7 +1,12 @@
 class AppMastersController < ApplicationController
 
   def index
-    @appmaster = AppMaster.all
+    @appmasters = AppMaster.all
+    render json: @appmasters
+  end
+
+  def show
+    @appmaster = AppMaster.find(params[:id])
     render json: @appmaster
   end
 

@@ -1,8 +1,8 @@
 class AppCallsController < ApplicationController
 
   def index
-    @appcall = AppCall.all
-    render json: @appcall
+    @appcalls = AppCall.all
+    render json: @appcalls
   end
 
   def show
